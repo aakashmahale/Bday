@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Message From Akash ✨</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            background: linear-gradient(135deg, #ffeef2 0%, #fff5f7 100%);
+            font-family: 'Poppins', sans-serif;
+            display: flex; justify-content: center; align-items: center;
+            min-height: 100vh; overflow: hidden; padding: 20px;
+        }
+        .card {
+            background: white; padding: 35px 25px; border-radius: 24px;
+            box-shadow: 0 15px 35px rgba(214, 51, 132, 0.1); text-align: center;
+            max-width: 400px; width: 100%; border: 2px solid #ffccd5;
+            animation: fadeIn 0.5s ease;
+        }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        
+        .emoji-art { font-size: 65px; margin-bottom: 20px; display: inline-block; animation: bounce 2s infinite; }
+        @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+        
+        h1 { font-family: 'Comfortaa', cursive; color: #d63384; font-size: 24px; font-weight: 700; margin-bottom: 20px; }
+        p { color: #5c677d; font-size: 16px; margin-bottom: 25px; line-height: 1.5; }
+        .btn-container { display: flex; justify-content: center; gap: 15px; position: relative; }
+        
+        button, .btn-link {
+            padding: 12px 28px; font-size: 16px; font-family: 'Comfortaa', cursive; font-weight: 700;
+            border: none; border-radius: 50px; cursor: pointer; transition: all 0.2s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08); text-decoration: none; display: inline-block;
+        }
+        .btn-yes { background: linear-gradient(135deg, #ff477e, #ff7096); color: white; }
+        .btn-yes:hover { transform: scale(1.08); box-shadow: 0 8px 20px rgba(255, 71, 126, 0.3); }
+        
+        /* Premium WhatsApp Button */
+        .btn-wa { 
+            background: linear-gradient(135deg, #25D366, #128C7E); 
+            color: white; 
+            width: 100%; 
+            margin-top: 15px; 
+            box-shadow: 0 5px 15px rgba(37, 211, 102, 0.2);
+        }
+        .btn-wa:hover { transform: scale(1.03); box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4); }
+        
+        .btn-no { background-color: #e2e8f0; color: #64748b; z-index: 999; }
+        .info-box { background-color: #fff0f3; padding: 15px; border-radius: 15px; border-left: 5px solid #ff477e; margin: 15px 0; text-align: left; }
+    </style>
+</head>
+<body>
+
+    <div class="card" id="step1">
+        <div class="emoji-art">👋✨</div>
+        <h1>Hi, I'm Akash Mahale.</h1>
+        <p>Could we talk for a moment? 😊</p>
+        <div class="btn-container">
+            <button class="btn-yes" onclick="showStep(2)">Yes 🥰</button>
+            <button class="btn-no" onmouseover="runAway(this)" ontouchstart="runAway(this); event.preventDefault();">No 🥺</button>
+        </div>
+    </div>
+
+    <div class="card" id="step2" style="display: none;">
+        <div class="emoji-art">🎂🎉</div>
+        <h1>A Special Question!</h1>
+        <p>Are you coming to my small birthday gathering on <strong>June 24th</strong>? 🥳</p>
+        <div class="btn-container">
+            <button class="btn-yes" onclick="showStep(3)">Yes, Why Not? 💖</button>
+            <button class="btn-no" onmouseover="runAway(this)" ontouchstart="runAway(this); event.preventDefault();">No 🥺</button>
+        </div>
+    </div>
+
+    <div class="card" id="step3" style="display: none;">
+        <div class="emoji-art">🫂✨</div>
+        <h1>Just Checking...</h1>
+        <p>Will you be completely comfortable there? It's just a tiny circle of close friends. 🌸</p>
+        <div class="btn-container">
+            <button class="btn-yes" onclick="showStep(4)">Yes! Absolute Comfort 🥰</button>
+            <button class="btn-no" onmouseover="runAway(this)" ontouchstart="runAway(this); event.preventDefault();">No 🥺</button>
+        </div>
+    </div>
+
+    <div class="card" id="step4" style="display: none;">
+        <div class="emoji-art">🥳💖🌟</div>
+        <h1 style="color: #ff477e;">Yay! It's a Plan!</h1>
+        <p>I'm so incredibly happy you're coming! Here are the details:</p>
+        
+        <div class="info-box">
+            <p style="margin: 0; font-weight: 600; color: #1e293b;">📍 Venue:</p>
+            <p style="margin: 0; padding-left: 20px; color: #d63384; font-weight: 700;">House Number 230</p>
+        </div>
+        <div class="info-box">
+            <p style="margin: 0; font-weight: 600; color: #1e293b;">🕔 Time:</p>
+            <p style="margin: 0; padding-left: 20px; color: #d63384; font-weight: 700;">Evening at 5:30 PM</p>
+        </div>
+
+        <a class="btn-link btn-wa" href="https://wa.me/9302641817?text=Hey%20Akash!%20I%27m%20coming%20to%20your%20birthday%20gathering%20on%20June%2024th!%20See%20you%20there!%20%F0%9F%A5%B3%E2%9C%A8" target="_blank">
+            Confirm on WhatsApp 💬
+        </a>
+        <p style="margin-top: 20px; font-style: italic; color: #ff477e; font-weight: 600; font-size: 14px;">Click the button above to let me know! 🎈</p>
+    </div>
+
+    <script>
+        function showStep(stepNumber) {
+            document.querySelectorAll('.card').forEach(card => card.style.display = 'none');
+            document.getElementById('step' + stepNumber).style.display = 'block';
+        }
+
+        function runAway(btn) {
+            const padding = 30;
+            const maxX = window.innerWidth - btn.offsetWidth - padding;
+            const maxY = window.innerHeight - btn.offsetHeight - padding;
+            const randomX = Math.max(padding, Math.floor(Math.random() * maxX));
+            const randomY = Math.max(padding, Math.floor(Math.random() * maxY));
+            btn.style.position = 'fixed'; btn.style.left = randomX + 'px'; btn.style.top = randomY + 'px';
+        }
+    </script>
+</body>
+</html>
